@@ -101,24 +101,24 @@
      background-color: #fff;
      border-bottom: 1px solid #e6e6e6;
 }
-.header {
+.wp-header .header {
      display: flex;
      justify-content: space-between;
      justify-items: center;
      color: #5a5a5a;
      height: 60px;
 }
-.header .logo{
+.wp-header .header .logo{
      text-decoration: none;
      color: #404040;
      outline: none;
 }
-.header .logo span{
+.wp-header .header .logo span{
      line-height: 60px;
      font-size: 18px;
      padding: 0 12px;
 }
-.header .user{
+.wp-header .header .user{
      line-height: 60px;
      font-size: 15px;
      cursor: pointer;
