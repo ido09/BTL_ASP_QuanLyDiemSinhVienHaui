@@ -148,6 +148,8 @@
 .main {
     margin-top: 60px;
     overflow: hidden;
+    height: 100%;
+    min-height: 100vh;
 }
 
     .main .sidebar {
@@ -161,22 +163,44 @@
     }
 
     .main .content {
-        padding: 20px;
+        padding: 25px;
         width: calc(100% - 230px);
         float: right;
     }
 
-    .main .sidebar .title {
-        font-size: 12px;
-        font-weight: bold;
-        color: #b0b0b0;
-        padding: 35px 20px 15px 20px;
-    }
+        .main .content .mcontent {
+            background-color: #fff;
+            border-radius: 3px;
+            border-top: 3px solid #4285f4;
+            border-top-color: #4285f4;
+            padding: 20px;
+        }
 
-    .main .sidebar .menu {
-        list-style: none;
-        margin: 0;
-    }
+.mcontent .title {
+    font-weight: 300;
+    color: #5a5a5a;
+    font-family: "Roboto", Arial, sans-serif;
+    padding-bottom: 15px;
+}
+
+.line {
+    height: 1px;
+    ;
+    background-color: #d9d9d9;
+    margin-bottom: 20px;
+}
+
+.main .sidebar .title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #b0b0b0;
+    padding: 35px 20px 15px 20px;
+}
+
+.main .sidebar .menu {
+    list-style: none;
+    margin: 0;
+}
 
 .menu a {
     padding: 9px 20px;
@@ -212,4 +236,16 @@
 
 .menu .submenu > li:hover > a {
     background-color: #e7e7e7;
+}
+.tbl_render{
+    overflow-x: auto;
+}
+
+.tbl_render table th, .tbl_render table td {
+    color: #5a5a5a;
+    font-size: 14px;
+}
+
+.tbl_render table tr:nth-child(even) {
+    background: #f5f5f5;
 }

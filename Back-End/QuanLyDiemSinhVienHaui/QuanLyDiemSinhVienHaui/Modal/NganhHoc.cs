@@ -11,5 +11,6 @@ namespace QuanLyDiemSinhVienHaui.Modal
         public string name { get; set; }
         public string description { get; set; }
         public int id_khoa { get; set; }
+        public string tenkhoa { get; set; }
     }
 }

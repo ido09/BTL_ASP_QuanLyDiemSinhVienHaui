@@ -1,0 +1,104 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="QuanLyDiemSinhVienHaui.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" href="../lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="wrapper">
+                <div class="container-fluid wp-header">
+                    <div class="header">
+                        <a class="logo" href="#">
+                            <img src="../../images/logo-haui-size.png" height="46">
+                            <span>TRANG <asp:ContentPlaceHolder ID="role" runat="server">
+                                      </asp:ContentPlaceHolder> - ĐHCNHN</span>
+                        </a>
+                        <div class="user">
+                            Nguyễn Viết Linh
+                        </div>
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="sidebar">
+                        <div class="title">
+                            TÀI KHOẢN <asp:ContentPlaceHolder ID="taikhoan" runat="server">
+                                      </asp:ContentPlaceHolder>
+                        </div>
+                        <ul class="menu">
+                            <li><a href="#"><i class="fas fa-home"></i><span>Trang chủ</span></a></li>
+                            <li>
+                                <a href="#"><i class="fas fa-chalkboard-teacher"></i><span>Giảng viên</span> <span class="arrow"><i
+                                    class="fas fa-sort-down"></i></span></a>
+                                <ul class="submenu">
+                                    <li><a href="/Page/GiangVien/DSGiangVien.aspx">Danh sách giảng viên</a></li>
+                                    <li><a href="/Page/GiangVien/ThemGiangVien.aspx">Thêm giảng viên</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-user-graduate"></i><span>Sinh viên </span><span class="arrow"><i
+                                    class="fas fa-sort-down"></i></span></a>
+                                <ul class="submenu">
+                                    <li><a href="#">Danh sách sinh viên</a></li>
+                                    <li><a href="#">Thêm sinh viên</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-school"></i><span>Giảng dạy </span><span class="arrow"><i
+                                    class="fas fa-sort-down"></i></span></a>
+                                <ul class="submenu">
+                                    <li><a href="/Page/MonHoc/DSMonHoc.aspx">Môn học</a></li>
+                                    <li><a href="/Page/LopHoc/DSLopHoc.aspx">Lớp học</a></li>
+                                    <li><a href="/Page/MonHoc/PhanCongGiangDay.aspx">Phân công giảng dạy</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-bullseye"></i><span>Khoa, ngành </span><span class="arrow"><i
+                                    class="fas fa-sort-down"></i></span></a>
+                                <ul class="submenu">
+                                    <li><a href="/Page/KhoaNganh/DSKhoa.aspx">Danh sách khoa</a></li>
+                                    <li><a href="/Page/KhoaNganh/DSNganhHoc.aspx">Danh sách ngành học</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-user-circle"></i><span>Quản lý tài khoản </span><span class="arrow"><i
+                                    class="fas fa-sort-down"></i></span></a>
+                                <ul class="submenu">
+                                    <li><a href="#">Tài khoản sinh viên</a></li>
+                                    <li><a href="#">Tài khoản giảng viên</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fas fa-sign-out-alt"></i><span>Đăng xuất </span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="content">
+                        <div class="mcontent">
+                            <div class="title">
+                                <asp:ContentPlaceHolder ID="title2" runat="server">
+                            </asp:ContentPlaceHolder>
+                            </div>
+                            <div class="line"></div>
+                            <asp:ContentPlaceHolder ID="main_content" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<script src="../../lib/jquery-3.5.1.min.js"></script>
+<script src="../../lib/fontawesome/js/all.min.js"></script>
+<script src="../../lib/bootstrap/bootstrap.min.js"></script>
+<script src="../../js/index.js"></script>
+</html>
