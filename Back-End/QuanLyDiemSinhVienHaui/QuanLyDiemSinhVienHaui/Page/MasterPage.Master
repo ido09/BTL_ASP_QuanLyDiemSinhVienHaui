@@ -1,4 +1,5 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="QuanLyDiemSinhVienHaui.MasterPage" %>
+
 <!DOCTYPE html>
 
 <html>
@@ -21,20 +22,21 @@
                             <span>TRANG<asp:Label ID="txtRole" runat="server"></asp:Label>- ĐHCNHN</span>
                         </a>
                         <div class="user">
-                            <asp:Label ID="txtUserLogin" runat="server" ></asp:Label>
+                            <asp:Label ID="txtUserLogin" runat="server"></asp:Label>
                         </div>
                     </div>
                 </div>
                 <div class="main">
                     <div class="sidebar">
                         <div class="title">
-                            TÀI KHOẢN <asp:Label ID="txtRole2" runat="server"></asp:Label>
+                            TÀI KHOẢN
+                            <asp:Label ID="txtRole2" runat="server"></asp:Label>
                         </div>
-                        
+
                         <ul class="menu">
                             <%
-                            if (Session["ADMIN_LOGIN"] != null)
-                            {
+                                if (Session["ADMIN_LOGIN"] != null)
+                                {
                             %>
                             <li><a href="#"><i class="fas fa-home"></i><span>Trang chủ</span></a></li>
                             <li>
@@ -80,10 +82,10 @@
                             </li>
                             <%}%>
                             <%
-                            if (Session["GV_LOGIN"] != null)
-                            {%>
+                                if (Session["GV_LOGIN"] != null)
+                                {%>
 
-                            Giảng viên
+                                Giảng viên
 
                             <%} %>
                             <%
@@ -95,20 +97,15 @@
                             <%} %>
 
                             <li>
-                                    <asp:LinkButton ID="btnLogout" Text="Đăng xuất" runat="server" OnClick="btnLogout_Click"></asp:LinkButton>
+                                <asp:LinkButton ID="btnLogout" Text="Đăng xuất" runat="server" OnClick="btnLogout_Click"></asp:LinkButton>
                             </li>
                         </ul>
-                        
-                            
-                        
-
-
                     </div>
                     <div class="content">
                         <div class="mcontent">
                             <div class="title">
                                 <asp:ContentPlaceHolder ID="title2" runat="server">
-                            </asp:ContentPlaceHolder>
+                                </asp:ContentPlaceHolder>
                             </div>
                             <div class="line"></div>
                             <asp:ContentPlaceHolder ID="main_content" runat="server">
