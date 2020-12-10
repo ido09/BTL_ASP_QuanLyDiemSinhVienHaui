@@ -10,6 +10,6 @@ namespace QuanLyDiemSinhVienHaui.Modal
         public int id { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public int sotinchi { get; set; }
+        public int sotinchi { get; set; } 
     }
 }

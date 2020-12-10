@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyDiemSinhVienHaui
+namespace QuanLyDiemSinhVienHaui.Page.LopHoc
 {
 
 
-    public partial class MasterPage
+    public partial class DSLopHoc
     {
 
         /// <summary>
-        /// title control.
+        /// btnDSLopHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder title;
+        protected global::System.Web.UI.WebControls.Button btnDSLopHoc;
 
         /// <summary>
-        /// form1 control.
+        /// dsLopHoc control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
-        /// main_content control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder main_content;
+        protected global::System.Web.UI.WebControls.GridView dsLopHoc;
     }
 }
