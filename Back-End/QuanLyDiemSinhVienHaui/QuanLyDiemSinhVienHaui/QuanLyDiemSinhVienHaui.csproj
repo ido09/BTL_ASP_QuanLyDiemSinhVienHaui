@@ -1513,6 +1513,9 @@
     <Content Include="Page\MonHoc\PhanCongGiangDay.aspx" />
     <Content Include="Page\MonHoc\SuaMonHoc.aspx" />
     <Content Include="Page\MonHoc\ThemMonHoc.aspx" />
+    <Content Include="Page\SinhVien\DSSinhVien.aspx" />
+    <Content Include="Page\SinhVien\SuaSinhVien.aspx" />
+    <Content Include="Page\SinhVien\ThemSinhVien.aspx" />
     <Content Include="Page\TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1520,9 +1523,11 @@
     <Compile Include="DataUtil\ConnectDB.cs" />
     <Compile Include="DataUtil\GiangVienDB.cs" />
     <Compile Include="DataUtil\KhoaDB.cs" />
+    <Compile Include="DataUtil\LoginDB.cs" />
     <Compile Include="DataUtil\LopHocDB.cs" />
     <Compile Include="DataUtil\MonHocDB.cs" />
     <Compile Include="DataUtil\NganhHocDB.cs" />
+    <Compile Include="DataUtil\SinhVienDB.cs" />
     <Compile Include="Page\GiangVien\DSGiangVien.aspx.cs">
       <DependentUpon>DSGiangVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1644,6 +1649,27 @@
     <Compile Include="Page\MonHoc\PhanCongGiangDay.aspx.designer.cs">
       <DependentUpon>PhanCongGiangDay.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\SinhVien\DSSinhVien.aspx.cs">
+      <DependentUpon>DSSinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SinhVien\DSSinhVien.aspx.designer.cs">
+      <DependentUpon>DSSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SinhVien\SuaSinhVien.aspx.cs">
+      <DependentUpon>SuaSinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SinhVien\SuaSinhVien.aspx.designer.cs">
+      <DependentUpon>SuaSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SinhVien\ThemSinhVien.aspx.cs">
+      <DependentUpon>ThemSinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SinhVien\ThemSinhVien.aspx.designer.cs">
+      <DependentUpon>ThemSinhVien.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Page\MonHoc\SuaMonHoc.aspx.cs">
       <DependentUpon>SuaMonHoc.aspx</DependentUpon>
@@ -1733,6 +1759,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\GiangVien\" />
+    <Folder Include="images\SinhVien\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

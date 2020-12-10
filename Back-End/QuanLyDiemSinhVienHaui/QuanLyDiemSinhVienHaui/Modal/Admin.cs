@@ -10,5 +10,6 @@ namespace QuanLyDiemSinhVienHaui.Modal
         public int id { get; set; }
         public String username { get; set; }
         public String password { get; set; }
+        public int role { get; set; }
     }
 }

@@ -3,10 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Thêm giảng viên
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="role" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="taikhoan" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="title2" runat="server">
     THÊM GIẢNG VIÊN
 </asp:Content>

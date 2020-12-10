@@ -1,16 +1,17 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page/MasterPage.Master" AutoEventWireup="true" CodeBehind="SuaGiangVien.aspx.cs" Inherits="QuanLyDiemSinhVienHaui.Page.GiangVien.SuaGiangVien" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page/MasterPage.Master" AutoEventWireup="true" CodeBehind="SuaSinhVien.aspx.cs" Inherits="QuanLyDiemSinhVienHaui.Page.SinhVien.SuaSinhVien" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    Sửa giảng viên
+    Sửa sinh viên
 </asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="title2" runat="server">
-    SỬA GIẢNG VIÊN
+    SỬA SINH VIÊN
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="main_content" runat="server">
     <div class="form-group" style="width: 450px; margin: 0 auto">
         <div class="form-group row">
-            <label for="" class="col-4 col-form-label">Mã GV:</label>
+            <label for="" class="col-4 col-form-label">Mã SV:</label>
             <div class="col-8">
-                <asp:TextBox CssClass="form-control" Enabled="false" runat="server" ID="txtMaGV"></asp:TextBox>
+                <asp:TextBox CssClass="form-control" Enabled="false" runat="server" ID="txtMaSV"></asp:TextBox>
             </div>
         </div>
         <div class="form-group row">
@@ -60,15 +61,15 @@
         </div>
 
         <div class="form-group row">
-            <label for="" class="col-4 col-form-label">Khoa:</label>
+            <label for="" class="col-4 col-form-label">Lớp:</label>
             <div class="col-8">
-                <asp:DropDownList ID="ddlKhoa" CssClass="form-control" runat="server"></asp:DropDownList>
+                <asp:DropDownList ID="ddlLop" CssClass="form-control" runat="server"></asp:DropDownList>
             </div>
         </div>
 
         <div class="text-center">
             <asp:Button CssClass="btn btn-primary mt-3 px-5" ID="CapNhat" Text="Cập nhật" runat="server" OnClick="CapNhat_Click" />
-            <asp:Button CssClass="btn btn-dark mt-3 px-5" ID="QuayLai" PostBackUrl="~/Page/GiangVien/DSGiangVien.aspx" Text="Quay lại" runat="server" />
+            <asp:Button CssClass="btn btn-dark mt-3 px-5" ID="QuayLai" PostBackUrl="~/Page/SinhVien/DSSinhVien.aspx" Text="Quay lại" runat="server" />
         </div>
         <div class="text-center mt-5">
             <asp:Label ID="msg" runat="server" Font-Bold="true"></asp:Label>

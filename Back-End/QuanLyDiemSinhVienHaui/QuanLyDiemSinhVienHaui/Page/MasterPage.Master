@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="QuanLyDiemSinhVienHaui.MasterPage" %>
-
 <!DOCTYPE html>
 
 <html>
@@ -19,21 +18,24 @@
                     <div class="header">
                         <a class="logo" href="#">
                             <img src="../../images/logo-haui-size.png" height="46">
-                            <span>TRANG <asp:ContentPlaceHolder ID="role" runat="server">
-                                      </asp:ContentPlaceHolder> - ĐHCNHN</span>
+                            <span>TRANG<asp:Label ID="txtRole" runat="server"></asp:Label>- ĐHCNHN</span>
                         </a>
                         <div class="user">
-                            Nguyễn Viết Linh
+                            <asp:Label ID="txtUserLogin" runat="server" ></asp:Label>
                         </div>
                     </div>
                 </div>
                 <div class="main">
                     <div class="sidebar">
                         <div class="title">
-                            TÀI KHOẢN <asp:ContentPlaceHolder ID="taikhoan" runat="server">
-                                      </asp:ContentPlaceHolder>
+                            TÀI KHOẢN <asp:Label ID="txtRole2" runat="server"></asp:Label>
                         </div>
+                        
                         <ul class="menu">
+                            <%
+                            if (Session["ADMIN_LOGIN"] != null)
+                            {
+                            %>
                             <li><a href="#"><i class="fas fa-home"></i><span>Trang chủ</span></a></li>
                             <li>
                                 <a href="#"><i class="fas fa-chalkboard-teacher"></i><span>Giảng viên</span> <span class="arrow"><i
@@ -47,8 +49,8 @@
                                 <a href="#"><i class="fas fa-user-graduate"></i><span>Sinh viên </span><span class="arrow"><i
                                     class="fas fa-sort-down"></i></span></a>
                                 <ul class="submenu">
-                                    <li><a href="#">Danh sách sinh viên</a></li>
-                                    <li><a href="#">Thêm sinh viên</a></li>
+                                    <li><a href="/Page/SinhVien/DSSinhVien.aspx">Danh sách sinh viên</a></li>
+                                    <li><a href="/Page/SinhVien/ThemSinhVien.aspx">Thêm sinh viên</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -76,10 +78,31 @@
                                     <li><a href="#">Tài khoản giảng viên</a></li>
                                 </ul>
                             </li>
+                            <%}%>
+                            <%
+                            if (Session["GV_LOGIN"] != null)
+                            {%>
+
+                            Giảng viên
+
+                            <%} %>
+                            <%
+                                if (Session["SV_LOGIN"] != null)
+                                {%>
+
+                            SinhVien
+
+                            <%} %>
+
                             <li>
-                                <a href="#"><i class="fas fa-sign-out-alt"></i><span>Đăng xuất </span></a>
+                                    <asp:LinkButton ID="btnLogout" Text="Đăng xuất" runat="server" OnClick="btnLogout_Click"></asp:LinkButton>
                             </li>
                         </ul>
+                        
+                            
+                        
+
+
                     </div>
                     <div class="content">
                         <div class="mcontent">

@@ -1,14 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page/MasterPage.Master" AutoEventWireup="true" CodeBehind="DSGiangVien.aspx.cs" Inherits="QuanLyDiemSinhVienHaui.Page.GiangVien.DSGiangVien" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page/MasterPage.Master" AutoEventWireup="true" CodeBehind="DSSinhVien.aspx.cs" Inherits="QuanLyDiemSinhVienHaui.Page.SinhVien.DSSinhVien" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    Danh sách giảng viên
+    Danh sách sinh viên 
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="title2" runat="server">
-    DANH SÁCH GIẢNG VIÊN
+
+<asp:Content ID="Content4" ContentPlaceHolderID="title2" runat="server">
+    DANH SÁCH SINH VIÊN
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="main_content" runat="server">
+<asp:Content ID="Content5" ContentPlaceHolderID="main_content" runat="server">
     <div class="my-3 d-flex justify-content-between align-content-center">
-        <asp:Button CssClass="btn btn-primary" ID="btnDSGiangvien" Text="Thêm giảng viên" runat="server" PostBackUrl="~/Page/GiangVien/ThemGiangVien.aspx" />
+        <asp:Button CssClass="btn btn-primary" ID="btnDSSinhVien" Text="Thêm sinh viên" runat="server" PostBackUrl="~/Page/SinhVien/ThemSinhVien.aspx" />
         <div class="form-group" style="width: 350px; margin:0">
             <div class="form-group row m-0 align-items-center">
                 <label for="" class="col-4 col-form-label">
@@ -22,9 +22,9 @@
     </div>
 
     <div class="tbl_render">
-        <asp:GridView ID="dsGiangVien" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered">
+        <asp:GridView ID="dsSinhVien" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered">
             <Columns>
-                <asp:BoundField DataField="id" HeaderText="Mã GV" />
+                <asp:BoundField DataField="id" HeaderText="Mã SV" />
                 <asp:BoundField DataField="name" HeaderText="Họ tên" />
                 <asp:ImageField DataImageUrlField="avatar" HeaderText="Ảnh" ControlStyle-Width="50px"></asp:ImageField>
                 <asp:BoundField DataField="birthday" HeaderText="Ngày Sinh" />
@@ -32,7 +32,7 @@
                 <asp:BoundField DataField="email" HeaderText="Email" />
                 <asp:BoundField DataField="phone" HeaderText="SDT" />
                 <asp:BoundField DataField="address" HeaderText="Địa chỉ" />
-                <asp:BoundField DataField="id_khoa" HeaderText="Mã Khoa" />
+                <asp:BoundField DataField="id_lop" HeaderText="Mã Lớp" />
 
                 <asp:TemplateField HeaderText="Xóa" ItemStyle-CssClass="text-center" ItemStyle-Width="100px">
                     <ItemTemplate>

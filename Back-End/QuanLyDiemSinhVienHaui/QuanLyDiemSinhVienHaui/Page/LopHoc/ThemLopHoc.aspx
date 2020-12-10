@@ -2,10 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Thêm lớp học
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="role" runat="server">
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="taikhoan" runat="server">
-</asp:Content>
+
 <asp:Content ID="Content4" ContentPlaceHolderID="title2" runat="server">
     THÊM LỚP HỌC
 </asp:Content>
