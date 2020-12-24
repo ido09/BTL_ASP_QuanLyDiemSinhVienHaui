@@ -1510,12 +1510,18 @@
     <Content Include="lib\fontawesome\webfonts\fa-solid-900.svg" />
     <Content Include="lib\jquery-3.5.1.min.js" />
     <Content Include="Page\Login.aspx" />
+    <Content Include="Page\MonHoc\ThemPhanCong.aspx" />
     <Content Include="Page\MonHoc\PhanCongGiangDay.aspx" />
     <Content Include="Page\MonHoc\SuaMonHoc.aspx" />
+    <Content Include="Page\MonHoc\SuaPhanCong.aspx" />
     <Content Include="Page\MonHoc\ThemMonHoc.aspx" />
     <Content Include="Page\SinhVien\DSSinhVien.aspx" />
     <Content Include="Page\SinhVien\SuaSinhVien.aspx" />
     <Content Include="Page\SinhVien\ThemSinhVien.aspx" />
+    <Content Include="Page\TaiKhoan\CapNhatTaiKhoanGiangVien.aspx" />
+    <Content Include="Page\TaiKhoan\TaiKhoanGiangVien.aspx" />
+    <Content Include="Page\TaiKhoan\TaiKhoanSinhVien.aspx" />
+    <Content Include="Page\TaiKhoan\CapNhatTaiKhoanSinhVien.aspx" />
     <Content Include="Page\TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1527,6 +1533,7 @@
     <Compile Include="DataUtil\LopHocDB.cs" />
     <Compile Include="DataUtil\MonHocDB.cs" />
     <Compile Include="DataUtil\NganhHocDB.cs" />
+    <Compile Include="DataUtil\PhanCongGiangDayDB.cs" />
     <Compile Include="DataUtil\SinhVienDB.cs" />
     <Compile Include="Page\GiangVien\DSGiangVien.aspx.cs">
       <DependentUpon>DSGiangVien.aspx</DependentUpon>
@@ -1642,12 +1649,26 @@
     <Compile Include="Modal\MonHoc.cs" />
     <Compile Include="Modal\NganhHoc.cs" />
     <Compile Include="Modal\SinhVien.cs" />
+    <Compile Include="Page\MonHoc\ThemPhanCong.aspx.cs">
+      <DependentUpon>ThemPhanCong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\MonHoc\ThemPhanCong.aspx.designer.cs">
+      <DependentUpon>ThemPhanCong.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\MonHoc\PhanCongGiangDay.aspx.cs">
       <DependentUpon>PhanCongGiangDay.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page\MonHoc\PhanCongGiangDay.aspx.designer.cs">
       <DependentUpon>PhanCongGiangDay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\MonHoc\SuaPhanCong.aspx.cs">
+      <DependentUpon>SuaPhanCong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\MonHoc\SuaPhanCong.aspx.designer.cs">
+      <DependentUpon>SuaPhanCong.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\SinhVien\DSSinhVien.aspx.cs">
       <DependentUpon>DSSinhVien.aspx</DependentUpon>
@@ -1669,6 +1690,34 @@
     </Compile>
     <Compile Include="Page\SinhVien\ThemSinhVien.aspx.designer.cs">
       <DependentUpon>ThemSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\CapNhatTaiKhoanGiangVien.aspx.cs">
+      <DependentUpon>CapNhatTaiKhoanGiangVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\CapNhatTaiKhoanGiangVien.aspx.designer.cs">
+      <DependentUpon>CapNhatTaiKhoanGiangVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\TaiKhoanGiangVien.aspx.cs">
+      <DependentUpon>TaiKhoanGiangVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\TaiKhoanGiangVien.aspx.designer.cs">
+      <DependentUpon>TaiKhoanGiangVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\TaiKhoanSinhVien.aspx.cs">
+      <DependentUpon>TaiKhoanSinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\TaiKhoanSinhVien.aspx.designer.cs">
+      <DependentUpon>TaiKhoanSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\CapNhatTaiKhoanSinhVien.aspx.cs">
+      <DependentUpon>CapNhatTaiKhoanSinhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\TaiKhoan\CapNhatTaiKhoanSinhVien.aspx.designer.cs">
+      <DependentUpon>CapNhatTaiKhoanSinhVien.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Page\MonHoc\SuaMonHoc.aspx.cs">

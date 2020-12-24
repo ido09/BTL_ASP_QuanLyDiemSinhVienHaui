@@ -38,9 +38,12 @@ namespace QuanLyDiemSinhVienHaui.Page.LopHoc
                 string tenLop = txtTenLop.Text;
                 string moTa = txtMoTa.Text;
                 int id_nganh = int.Parse(ddlNganh.SelectedValue);
-
+                if (tenLop.Trim().Equals(""))
+                {
+                    msg.Text = "Tên lớp không được để trống.";
+                    return;
+                }
                 Lop lop = new Lop();
-
                 lop.id = maLop;
                 lop.name = tenLop;
                 lop.description = moTa;

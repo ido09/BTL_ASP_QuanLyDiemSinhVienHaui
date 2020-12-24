@@ -11,13 +11,14 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
 {
     public partial class ThemGiangVien : System.Web.UI.Page
     {
-        KhoaDB khoa = new KhoaDB();
-        GiangVienDB data = new GiangVienDB();
+        KhoaDB khoaDB = new KhoaDB();
+        GiangVienDB giangVienDB = new GiangVienDB();
+        SinhVienDB sinhVienDB = new SinhVienDB();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                ddlKhoa.DataSource = khoa.getDSKhoa();
+                ddlKhoa.DataSource = khoaDB.getDSKhoa();
                 ddlKhoa.DataTextField = "name";
                 ddlKhoa.DataValueField = "id";
                 DataBind();
@@ -39,13 +40,22 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
                 string email = txtEmail.Text;
                 string phone = txtPhone.Text;
                 string address = txtAddress.Text;
-
+                string avatar = "";
                 //save file
-                string path = Server.MapPath("~/images/GiangVien/");
-                fileAvatar.SaveAs(path + fileAvatar.FileName);
-
-                string avatar = "/images/GiangVien/" + fileAvatar.FileName;
+                if (!fileAvatar.FileName.Equals(""))
+                {
+                    string path = Server.MapPath("~/images/GiangVien/");
+                    fileAvatar.SaveAs(path + fileAvatar.FileName);
+                    avatar = "/images/GiangVien/" + fileAvatar.FileName;
+                }
                 int id_khoa = int.Parse(ddlKhoa.SelectedValue);
+
+                // kiểm tra tồn tại email?
+                if (giangVienDB.checkExistEmail(email) || sinhVienDB.checkExistEmail(email))
+                {
+                    msg.Text += "Email đã tồn tại. Vui lòng nhập emai khác.";
+                    return;
+                }
 
                 Modal.GiangVien gv = new Modal.GiangVien();
                 gv.name = name;
@@ -57,7 +67,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
                 gv.avatar = avatar;
                 gv.id_khoa = id_khoa;
 
-                data.themGV(gv);
+                giangVienDB.themGV(gv);
                 msg.Text = "Thêm thành công.";
             }
             catch (Exception ex)

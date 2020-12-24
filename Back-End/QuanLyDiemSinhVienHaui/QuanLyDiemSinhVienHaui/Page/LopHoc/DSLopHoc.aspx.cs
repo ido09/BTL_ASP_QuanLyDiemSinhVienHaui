@@ -42,5 +42,17 @@ namespace QuanLyDiemSinhVienHaui.Page.LopHoc
                 Response.Redirect("SuaLopHoc.aspx");
             }
         }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = txtKeyWord.Text.Trim();
+            if (keyword.Equals(""))
+                hienThiDSLopHoc();
+            else
+            {
+                dsLopHoc.DataSource = data.timkiemLopHoc(keyword);
+                DataBind();
+            }
+        }
     }
 }
