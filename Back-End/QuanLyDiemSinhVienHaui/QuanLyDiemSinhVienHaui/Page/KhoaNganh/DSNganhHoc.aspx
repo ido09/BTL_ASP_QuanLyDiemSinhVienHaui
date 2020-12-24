@@ -8,8 +8,18 @@
     DANH SÁCH NGÀNH HỌC
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="main_content" runat="server">
-    <div class="my-3">
+    <div class="my-3 d-flex justify-content-between align-content-center">
         <asp:Button CssClass="btn btn-primary" ID="btnDSNganh" Text="Thêm ngành" runat="server" PostBackUrl="~/Page/KhoaNganh/ThemNganhHoc.aspx" />
+        <div class="form-group" style="width: 350px; margin:0">
+            <div class="form-group row m-0 align-items-center">
+                <label for="" class="col-4 col-form-label">
+                    <asp:Button CssClass="btn btn-primary" ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
+                </label>
+                <div class="col-8 ">
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtKeyWord"></asp:TextBox>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="tbl_render">
         <asp:GridView ID="dsNganh" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered">

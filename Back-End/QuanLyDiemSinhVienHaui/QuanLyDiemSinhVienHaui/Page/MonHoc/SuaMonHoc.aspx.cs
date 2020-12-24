@@ -32,6 +32,16 @@ namespace QuanLyDiemSinhVienHaui
                 string tenMon = txtTenMon.Text;
                 int soTinChi = int.Parse(txtSoTinChi.Text);
                 string moTa = txtMoTa.Text;
+                if (tenMon.Trim().Equals(""))
+                {
+                    msg.Text = "Tên môn không được để trống.";
+                    return;
+                }
+                if (txtSoTinChi.Text.Trim().Equals(""))
+                {
+                    msg.Text = "Số tín chỉ không được để trống.";
+                    return;
+                }
                 MonHoc mon = new MonHoc();
                 mon.id = maMon;
                 mon.name = tenMon;

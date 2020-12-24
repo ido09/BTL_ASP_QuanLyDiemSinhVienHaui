@@ -11,8 +11,8 @@ namespace QuanLyDiemSinhVienHaui.Page.SinhVien
 {
     public partial class SuaSinhVien : System.Web.UI.Page
     {
-        LopHocDB lop = new LopHocDB();
-        SinhVienDB data = new SinhVienDB();
+        LopHocDB lopHocDB = new LopHocDB();
+        SinhVienDB sinhVienDB = new SinhVienDB();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -30,7 +30,7 @@ namespace QuanLyDiemSinhVienHaui.Page.SinhVien
                     rdNam.Checked = true;
                 else rdNu.Checked = true;
 
-                ddlLop.DataSource = lop.getDSLopHoc();
+                ddlLop.DataSource = lopHocDB.getDSLopHoc();
                 ddlLop.DataTextField = "name";
                 ddlLop.DataValueField = "id";
                 DataBind();
@@ -55,7 +55,7 @@ namespace QuanLyDiemSinhVienHaui.Page.SinhVien
                 //save file
                 if (fileAvatar.FileName.Equals(""))
                 {
-                    avatar = data.layAvatar(id);//lấy file cũ trong db
+                    avatar = sinhVienDB.layAvatar(id);//lấy file cũ trong db
                 }
                 else
                 {
@@ -76,7 +76,7 @@ namespace QuanLyDiemSinhVienHaui.Page.SinhVien
                 sv.avatar = avatar;
                 sv.id_lop = id_lop;
 
-                data.suaSV(sv);
+                sinhVienDB.suaSV(sv);
                 Response.Redirect("DSSinhVien.aspx");
             }
             catch (Exception ex)

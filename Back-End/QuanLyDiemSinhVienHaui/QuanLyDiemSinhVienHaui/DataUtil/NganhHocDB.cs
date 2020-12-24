@@ -45,6 +45,27 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             conn.Close();
         }
 
+        public List<NganhHoc> timkiemNganhHoc(string keyword)
+        {
+            conn.Open();
+            List<NganhHoc> ds = new List<NganhHoc>();
+            string sql = "select * from NganhHoc where name LIKE @keyword";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@keyword", '%' + keyword + '%');
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                NganhHoc n = new NganhHoc();
+                n.id = (int)rd["id"];
+                n.name = (string)rd["name"];
+                n.description = (string)rd["description"];
+                n.id_khoa = (int)rd["id_khoa"];
+                ds.Add(n);
+            }
+            conn.Close();
+            return ds;
+        }
+
         public void editNganhHoc(NganhHoc NganhHoc)
         {
             conn.Open();

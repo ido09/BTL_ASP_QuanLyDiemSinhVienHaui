@@ -58,6 +58,9 @@
                 <asp:FileUpload ID="fileAvatar" runat="server" />
             </div>
         </div>
+        <div class="form-group row">
+            <asp:Image runat="server" ID="avatarOld" />
+        </div>
 
         <div class="form-group row">
             <label for="" class="col-4 col-form-label">Khoa:</label>

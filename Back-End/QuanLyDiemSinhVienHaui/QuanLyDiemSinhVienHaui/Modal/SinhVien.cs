@@ -17,6 +17,5 @@ namespace QuanLyDiemSinhVienHaui.Modal
         public string avatar { get; set; }
         public string password { get; set; }
         public int id_lop { get; set; }
-        public int role { get; set; }
     }
 }

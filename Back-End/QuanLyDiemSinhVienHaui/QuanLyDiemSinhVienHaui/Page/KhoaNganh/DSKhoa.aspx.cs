@@ -43,5 +43,17 @@ namespace QuanLyDiemSinhVienHaui.Page.KhoaNganh
                 hienThiDSKhoa();
             }
         }
+
+        protected void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            string keyword = txtKeyWord.Text.Trim();
+            if (keyword.Equals(""))
+                hienThiDSKhoa();
+            else
+            {
+                dsKhoa.DataSource = data.timkiemKhoa(keyword);
+                DataBind();
+            }
+        }
     }
 }

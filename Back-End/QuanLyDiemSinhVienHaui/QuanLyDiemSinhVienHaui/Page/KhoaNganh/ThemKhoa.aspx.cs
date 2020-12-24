@@ -23,6 +23,11 @@ namespace QuanLyDiemSinhVienHaui.Page.KhoaNganh
             {
                 string tenKhoa = txtTenKhoa.Text;
                 string moTa = txtMoTa.Text;
+                if (tenKhoa.Trim().Equals(""))
+                {
+                    msg.Text = "Tên khoa không được để trống.";
+                    return;
+                }
                 Khoa khoa = new Khoa();
                 khoa.name = tenKhoa;
                 khoa.description = moTa;

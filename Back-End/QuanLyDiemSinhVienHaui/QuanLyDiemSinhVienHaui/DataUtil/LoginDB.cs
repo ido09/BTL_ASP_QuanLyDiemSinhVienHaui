@@ -32,7 +32,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 gv.address = (string)rd["address"];
                 gv.avatar = (string)rd["avatar"];
                 gv.id_khoa = (int)rd["id_khoa"];
-                gv.role = (int)rd["role"];
             }
             conn.Close();
             return gv;
@@ -59,7 +58,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 sv.address = (string)rd["address"];
                 sv.avatar = (string)rd["avatar"];
                 sv.id_lop = (int)rd["id_lop"];
-                sv.role = (int)rd["role"];
             }
             conn.Close();
             return sv;
