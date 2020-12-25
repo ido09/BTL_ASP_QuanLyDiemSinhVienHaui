@@ -31,11 +31,6 @@ namespace QuanLyDiemSinhVienHaui.Page.KhoaNganh
                 string tenNganh = txtTenNganh.Text;
                 string moTa = txtMoTa.Text;
                 int id_khoa = int.Parse(ddlKhoa.SelectedValue);
-                if (tenNganh.Trim().Equals(""))
-                {
-                    msg.Text = "Tên ngành học không được để trống.";
-                    return;
-                }
                 NganhHoc nganh = new NganhHoc();
                 nganh.name = tenNganh;
                 nganh.description = moTa;

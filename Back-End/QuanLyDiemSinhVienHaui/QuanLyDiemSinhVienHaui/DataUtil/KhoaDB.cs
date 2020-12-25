@@ -54,26 +54,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             conn.Close();
         }
 
-        public List<Khoa> timkiemKhoa(string keyword)
-        {
-            conn.Open();
-            List<Khoa> ds = new List<Khoa>();
-            string sql = "select * from Khoa where name LIKE @keyword";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@keyword", '%' + keyword + '%');
-            SqlDataReader rd = cmd.ExecuteReader();
-            while (rd.Read())
-            {
-                Khoa k = new Khoa();
-                k.id = (int)rd["id"];
-                k.name = (string)rd["name"];
-                k.description = (string)rd["description"];
-                ds.Add(k);
-            }
-            conn.Close();
-            return ds;
-        }
-
         public Khoa get1Khoa(int id)
         {
             conn.Open();

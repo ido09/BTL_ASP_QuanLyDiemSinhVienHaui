@@ -10,12 +10,12 @@ namespace QuanLyDiemSinhVienHaui.Modal
         public int id_sv { get; set; }
         public int id_mon { get; set; }
 
-        public double diemTX1 { get; set; }
-        public double diemTX2 { get; set; }
-        public double diemThi1 { get; set; }
-        public double diemThi2 { get; set; }
-        public double diem10 { get; set; }
-        public double diem4 { get; set; }
+        public int diemTX1 { get; set; }
+        public int diemTX2 { get; set; }
+        public int diemThi1 { get; set; }
+        public int diemThi2 { get; set; }
+        public int diem10 { get; set; }
+        public int diem4 { get; set; }
         public string diemChu { get; set; }
         public string xepLoai { get; set; }
         public string ghiChu { get; set; }

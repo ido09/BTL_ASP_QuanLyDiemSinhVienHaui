@@ -7,38 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyDiemSinhVienHaui.Page.TaiKhoan
+namespace QuanLyDiemSinhVienHaui.Page
 {
 
 
-    public partial class TaiKhoanSinhVien
+    public partial class DoiMatKhau
     {
 
         /// <summary>
-        /// btnTimKiem control.
+        /// txtmatkhaucu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTimKiem;
+        protected global::System.Web.UI.WebControls.TextBox txtmatkhaucu;
 
         /// <summary>
-        /// txtKeyWord control.
+        /// txtmatkhaumoi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKeyWord;
+        protected global::System.Web.UI.WebControls.TextBox txtmatkhaumoi;
 
         /// <summary>
-        /// dsSinhVien control.
+        /// txtxacnhanmatkhau control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dsSinhVien;
+        protected global::System.Web.UI.WebControls.TextBox txtxacnhanmatkhau;
+
+        /// <summary>
+        /// CapnhatMK control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button CapnhatMK;
     }
 }

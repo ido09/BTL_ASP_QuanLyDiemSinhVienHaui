@@ -43,27 +43,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             conn.Close();
         }
 
-        public List<Lop> timkiemLopHoc(string keyword)
-        {
-            conn.Open();
-            List<Lop> ds = new List<Lop>();
-            string sql = "select * from Lop where name LIKE @keyword";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@keyword", '%' + keyword + '%');
-            SqlDataReader rd = cmd.ExecuteReader();
-            while (rd.Read())
-            {
-                Lop lop = new Lop();
-                lop.id = (int)rd["id"];
-                lop.name = (string)rd["name"];
-                lop.description = (string)rd["description"];
-                lop.id_nganhhoc = (int)rd["id_nganhhoc"];
-                ds.Add(lop);
-            }
-            return ds;
-            conn.Close();
-        }
-
         public void editLopHoc(Lop lop)
         {
             conn.Open();
