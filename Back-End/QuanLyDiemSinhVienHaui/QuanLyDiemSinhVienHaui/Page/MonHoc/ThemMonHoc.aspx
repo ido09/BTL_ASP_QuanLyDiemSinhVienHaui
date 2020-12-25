@@ -9,6 +9,28 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="main_content" runat="server">
     <div class="form-group" style="width: 450px; margin: 0 auto">
+        <%-- <asp:Table runat="server" ID="tblThemMon" Width="347px" Height="122px">
+            <asp:TableRow CssClass="my-5">
+                <asp:TableCell CssClass="mr-4">Tên môn</asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox CssClass="form-control" runat="server" ID="txtTenMon"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow CssClass="my-5">
+                <asp:TableCell CssClass="mr-4">Số tín chỉ</asp:TableCell>
+                <asp:TableCell CssClass="mr-4">
+                    <asp:TextBox CssClass="form-control " runat="server" ID="txtSoTinChi"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow CssClass="my-5">
+                <asp:TableCell CssClass="mr-4">Mô tả</asp:TableCell>
+                <asp:TableCell>
+                    <asp:TextBox CssClass="form-control " runat="server" ID="txtMoTa"></asp:TextBox>
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>--%>
+
+
         <div class="form-group row">
             <label for="" class="col-4 col-form-label">Tên môn:</label>
             <div class="col-8">

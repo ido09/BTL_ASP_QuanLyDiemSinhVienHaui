@@ -7,18 +7,8 @@
     DANH SÁCH KHOA
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="main_content" runat="server">
-    <div class="my-3 d-flex justify-content-between align-content-center">
+    <div class="my-3">
         <asp:Button CssClass="btn btn-primary" ID="btnDSKhoa" Text="Thêm khoa" runat="server" PostBackUrl="~/Page/KhoaNganh/ThemKhoa.aspx" />
-        <div class="form-group" style="width: 350px; margin:0">
-            <div class="form-group row m-0 align-items-center">
-                <label for="" class="col-4 col-form-label">
-                    <asp:Button CssClass="btn btn-primary" ID="btnTimKiem" Text="Tìm kiếm" runat="server" OnClick="btnTimKiem_Click" />
-                </label>
-                <div class="col-8 ">
-                    <asp:TextBox runat="server" CssClass="form-control" ID="txtKeyWord"></asp:TextBox>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="tbl_render">
         <asp:GridView ID="dsKhoa" runat="server" AutoGenerateColumns="false" CssClass="table table-bordered">

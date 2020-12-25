@@ -29,37 +29,14 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 gv.phone = (string)rd["phone"];
                 gv.address = (string)rd["address"];
                 gv.avatar = (string)rd["avatar"];
-                if (rd["password"] != null)
-                {
-                    gv.password = rd["password"].ToString();
-                }
-                else gv.password = null;
                 gv.id_khoa = (int)rd["id_khoa"];
+                gv.role = (int)rd["role"];
                 ds.Add(gv);
             }
             conn.Close();
             return ds;
         }
 
-        public void capNhatTK(GiangVien gv)
-        {
-            conn.Open();
-            string sql = "update GiangVien set password = @pass where id = @id";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@pass", gv.password);
-            cmd.Parameters.AddWithValue("@id", gv.id);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
-
-        public void xoaTK(int id)
-        {
-            conn.Open();
-            string sql = "update GiangVien set password = null where id = " + id;
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
         public void xoaGV(int id)
         {
             conn.Open();
@@ -75,7 +52,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             string sql = "update GiangVien set name=@name, gender = @gender," +
                 "birthday = @birthday, email = @email, phone = @phone," +
                 "address = @address, avatar = @avatar, " +
-                "id_khoa = @id_khoa where id=@id";
+                "id_khoa = @id_khoa, role = 2 where id=@id";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@name", gv.name);
             cmd.Parameters.AddWithValue("@gender", gv.gender);
@@ -94,9 +71,8 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
         {
             conn.Open();
             List<GiangVien> ds = new List<GiangVien>();
-            string sql = "select * from GiangVien where name LIKE @keyword";
+            string sql = "select * from GiangVien where name LIKE '%" + keyword + "%'";
             SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@keyword", '%' + keyword + '%');
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {   
@@ -110,6 +86,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 gv.address = (string)rd["address"];
                 gv.avatar = (string)rd["avatar"];
                 gv.id_khoa = (int)rd["id_khoa"];
+                gv.role = (int)rd["role"];
                 ds.Add(gv);
             }
             conn.Close();
@@ -120,7 +97,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
         {
             conn.Open();
             string sql = "insert into GiangVien values(@name, @gender,@birthday, @email," +
-                "@phone, @address, @avatar,null, @id_khoa)";
+                "@phone, @address, @avatar,null, @id_khoa, 2)";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@name", gv.name);
             cmd.Parameters.AddWithValue("@gender", gv.gender);
@@ -152,6 +129,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 gv.address = (string)rd["address"];
                 gv.avatar = (string)rd["avatar"];
                 gv.id_khoa = (int)rd["id_khoa"];
+                gv.role = (int)rd["role"];
             }
             conn.Close();
             return gv;
@@ -170,22 +148,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             }
             conn.Close();
             return avatar;
-        }
-
-        public Boolean checkExistEmail(string email)
-        {
-            conn.Open();
-            Boolean c = false;
-            string sql = "select * from GiangVien where email = @email ";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@email", email);
-            SqlDataReader rd = cmd.ExecuteReader();
-            if (rd.Read())
-            {
-                c = true;
-            }
-            conn.Close();
-            return c;
         }
     }
 }

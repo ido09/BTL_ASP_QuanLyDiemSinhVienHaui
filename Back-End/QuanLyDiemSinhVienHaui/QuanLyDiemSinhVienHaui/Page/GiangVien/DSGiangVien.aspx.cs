@@ -11,7 +11,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
 {
     public partial class DSGiangVien : System.Web.UI.Page
     {
-        GiangVienDB giangVienDB = new GiangVienDB();
+        GiangVienDB data = new GiangVienDB();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,7 +21,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
 
         private void hienThiDSGiangVien()
         {
-            dsGiangVien.DataSource = giangVienDB.getDSGiangVien();
+            dsGiangVien.DataSource = data.getDSGiangVien();
             DataBind();
         }
 
@@ -30,7 +30,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
             if (e.CommandName == "xoa")
             {
                 int id = Convert.ToInt32(e.CommandArgument);
-                giangVienDB.xoaGV(id);
+                data.xoaGV(id);
                 hienThiDSGiangVien();
             }
         }
@@ -39,7 +39,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
             if (e.CommandName == "sua")
             {
                 int id = Convert.ToInt32(e.CommandArgument);
-                Session["giangvien"] = giangVienDB.lay1GV(id);
+                Session["giangvien"] = data.lay1GV(id);
                 Response.Redirect("SuaGiangVien.aspx");
             }
         }
@@ -51,7 +51,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
                 hienThiDSGiangVien();
             else
             {
-                dsGiangVien.DataSource = giangVienDB.timkiemGV(keyword);
+                dsGiangVien.DataSource = data.timkiemGV(keyword);
                 DataBind();
             }
         }

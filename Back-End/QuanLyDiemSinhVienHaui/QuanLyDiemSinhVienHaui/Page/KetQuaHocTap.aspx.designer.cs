@@ -7,38 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyDiemSinhVienHaui.Page.TaiKhoan
+namespace QuanLyDiemSinhVienHaui.Page
 {
 
 
-    public partial class TaiKhoanGiangVien
+    public partial class KetQuaHocTap
     {
 
         /// <summary>
-        /// btnTimKiem control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnTimKiem;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
 
         /// <summary>
-        /// txtKeyWord control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtKeyWord;
-
-        /// <summary>
-        /// dsGiangVien control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dsGiangVien;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

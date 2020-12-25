@@ -29,36 +29,12 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 sv.phone = (string)rd["phone"];
                 sv.address = (string)rd["address"];
                 sv.avatar = (string)rd["avatar"];
-                if (rd["password"] != null)
-                {
-                    sv.password = rd["password"].ToString();
-                }
-                else sv.password = null;
                 sv.id_lop = (int)rd["id_lop"];
+                sv.role = (int)rd["role"];
                 ds.Add(sv);
             }
             conn.Close();
             return ds;
-        }
-
-        public void capNhatTK(SinhVien sv)
-        {
-            conn.Open();
-            string sql = "update SinhVien set password = @pass where id = @id";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@pass", sv.password);
-            cmd.Parameters.AddWithValue("@id", sv.id);
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
-
-        public void xoaTK(int id)
-        {
-            conn.Open();
-            string sql = "update SinhVien set password = null where id = "+ id;
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.ExecuteNonQuery();
-            conn.Close();
         }
 
         public void xoaSV(int id)
@@ -76,7 +52,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             string sql = "update SinhVien set name=@name, gender = @gender," +
                 "birthday = @birthday, email = @email, phone = @phone," +
                 "address = @address, avatar = @avatar, " +
-                "id_lop = @id_lop where id=@id";
+                "id_lop = @id_lop, role = 3 where id=@id";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@name", sv.name);
             cmd.Parameters.AddWithValue("@gender", sv.gender);
@@ -95,9 +71,8 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
         {
             conn.Open();
             List<SinhVien> ds = new List<SinhVien>();
-            string sql = "select * from SinhVien where name LIKE @keyword";
+            string sql = "select * from SinhVien where name LIKE '%" + keyword + "%'";
             SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@keyword", '%' + keyword + '%');
             SqlDataReader rd = cmd.ExecuteReader();
             while (rd.Read())
             {
@@ -111,6 +86,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 sv.address = (string)rd["address"];
                 sv.avatar = (string)rd["avatar"];
                 sv.id_lop = (int)rd["id_lop"];
+                sv.role = (int)rd["role"];
                 ds.Add(sv);
             }
             conn.Close();
@@ -121,7 +97,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
         {
             conn.Open();
             string sql = "insert into SinhVien values(@name, @gender,@birthday, @email," +
-                "@phone, @address, @avatar,null, @id_lop)";
+                "@phone, @address, @avatar,null, @id_lop, 2)";
             SqlCommand cmd = new SqlCommand(sql, conn);
             cmd.Parameters.AddWithValue("@name", sv.name);
             cmd.Parameters.AddWithValue("@gender", sv.gender);
@@ -153,6 +129,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 sv.address = (string)rd["address"];
                 sv.avatar = (string)rd["avatar"];
                 sv.id_lop = (int)rd["id_lop"];
+                sv.role = (int)rd["role"];
             }
             conn.Close();
             return sv;
@@ -171,21 +148,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
             }
             conn.Close();
             return avatar;
-        }
-        public Boolean checkExistEmail(string email)
-        {
-            conn.Open();
-            Boolean c = false;
-            string sql = "select * from SinhVien where email = @email ";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@email", email);
-            SqlDataReader rd = cmd.ExecuteReader();
-            if (rd.Read())
-            {
-                c = true;
-            }
-            conn.Close();
-            return c;
         }
     }
 }

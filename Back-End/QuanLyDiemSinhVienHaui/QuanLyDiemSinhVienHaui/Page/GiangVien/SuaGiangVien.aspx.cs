@@ -11,8 +11,8 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
 {
     public partial class SuaGiangVien : System.Web.UI.Page
     {
-        KhoaDB khoaDB = new KhoaDB();
-        GiangVienDB giangVienDB = new GiangVienDB();
+        KhoaDB khoa = new KhoaDB();
+        GiangVienDB data = new GiangVienDB();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -29,7 +29,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
                     rdNam.Checked = true;
                 else rdNu.Checked = true;
 
-                ddlKhoa.DataSource = khoaDB.getDSKhoa();
+                ddlKhoa.DataSource = khoa.getDSKhoa();
                 ddlKhoa.DataTextField = "name";
                 ddlKhoa.DataValueField = "id";
                 DataBind();
@@ -56,7 +56,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
                 //save file
                 if (fileAvatar.FileName.Equals(""))
                 {
-                    avatar = giangVienDB.layAvatar(id);//lấy file cũ trong db
+                    avatar = data.layAvatar(id);//lấy file cũ trong db
                 }else
                 {
                     string path = Server.MapPath("~/images/GiangVien/");
@@ -76,7 +76,7 @@ namespace QuanLyDiemSinhVienHaui.Page.GiangVien
                 gv.avatar = avatar;
                 gv.id_khoa = id_khoa;
 
-                giangVienDB.suaGV(gv);
+                data.suaGV(gv);
                 Response.Redirect("DSGiangVien.aspx");
             }
             catch (Exception ex)
