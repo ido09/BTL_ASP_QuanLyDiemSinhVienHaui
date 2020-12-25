@@ -35,7 +35,7 @@ namespace QuanLyDiemSinhVienHaui.Page.TaiKhoan
                 }
                 if (password.Length < 6)
                 {
-                    msg.Text = "Mật khẩu phải lớn hơn hoặc bằng 6 kí tự.";
+                    msg.Text = "Mật khẩu phải lớn hơn hoặc bằng 6 kí tự. ";
                     return;
                 }
                 Modal.GiangVien gv = new Modal.GiangVien();
