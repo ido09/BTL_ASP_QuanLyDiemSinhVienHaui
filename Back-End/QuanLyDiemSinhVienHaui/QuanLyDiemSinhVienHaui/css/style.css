@@ -238,15 +238,16 @@
 .menu .submenu > li:hover > a {
     background-color: #e7e7e7;
 }
-.tbl_render{
+
+.tbl_render {
     overflow-x: auto;
 }
 
-.tbl_render table th, .tbl_render table td {
-    color: #5a5a5a;
-    font-size: 14px;
-}
+    .tbl_render table th, .tbl_render table td {
+        color: #5a5a5a;
+        font-size: 14px;
+    }
 
-.tbl_render table tr:nth-child(even) {
-    background: #f5f5f5;
-}
+    .tbl_render table tr:nth-child(even) {
+        background: #f5f5f5;
+    }
