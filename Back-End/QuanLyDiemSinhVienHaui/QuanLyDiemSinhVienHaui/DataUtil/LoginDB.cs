@@ -78,7 +78,6 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
                 ad.id = (int)rd["id"];
                 ad.username = (string)rd["username"];
                 ad.password = (string)rd["password"];
-                ad.role = (int)rd["role"];
             }
             conn.Close();
             return ad;

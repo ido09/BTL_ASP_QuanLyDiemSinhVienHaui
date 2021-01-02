@@ -68,9 +68,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\style.css" />
+    <Content Include="Page\CapNhatTTSV.aspx" />
+    <Content Include="Page\KetQuaThi.aspx" />
+    <Content Include="Page\DoiMatKhau.aspx" />
     <Content Include="Page\GiangVien\DSGiangVien.aspx" />
     <Content Include="Page\GiangVien\SuaGiangVien.aspx" />
     <Content Include="Page\GiangVien\ThemGiangVien.aspx" />
+    <Content Include="Page\KetQuaHocTap.aspx" />
     <Content Include="Page\KhoaNganh\DSKhoa.aspx" />
     <Content Include="Page\KhoaNganh\DSNganhHoc.aspx" />
     <Content Include="Page\KhoaNganh\SuaKhoa.aspx" />
@@ -1522,11 +1526,14 @@
     <Content Include="Page\TaiKhoan\TaiKhoanGiangVien.aspx" />
     <Content Include="Page\TaiKhoan\TaiKhoanSinhVien.aspx" />
     <Content Include="Page\TaiKhoan\CapNhatTaiKhoanSinhVien.aspx" />
+    <Content Include="Page\ThongTinCacLopHoc.aspx" />
     <Content Include="Page\TrangChu.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataUtil\CapNhatTTSVDB.cs" />
     <Compile Include="DataUtil\ConnectDB.cs" />
+    <Compile Include="DataUtil\DiemDB.cs" />
     <Compile Include="DataUtil\GiangVienDB.cs" />
     <Compile Include="DataUtil\KhoaDB.cs" />
     <Compile Include="DataUtil\LoginDB.cs" />
@@ -1535,6 +1542,27 @@
     <Compile Include="DataUtil\NganhHocDB.cs" />
     <Compile Include="DataUtil\PhanCongGiangDayDB.cs" />
     <Compile Include="DataUtil\SinhVienDB.cs" />
+    <Compile Include="Page\CapNhatTTSV.aspx.cs">
+      <DependentUpon>CapNhatTTSV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\CapNhatTTSV.aspx.designer.cs">
+      <DependentUpon>CapNhatTTSV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\KetQuaThi.aspx.cs">
+      <DependentUpon>KetQuaThi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\KetQuaThi.aspx.designer.cs">
+      <DependentUpon>KetQuaThi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\DoiMatKhau.aspx.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\DoiMatKhau.aspx.designer.cs">
+      <DependentUpon>DoiMatKhau.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\GiangVien\DSGiangVien.aspx.cs">
       <DependentUpon>DSGiangVien.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1555,6 +1583,13 @@
     </Compile>
     <Compile Include="Page\GiangVien\ThemGiangVien.aspx.designer.cs">
       <DependentUpon>ThemGiangVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\KetQuaHocTap.aspx.cs">
+      <DependentUpon>KetQuaHocTap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\KetQuaHocTap.aspx.designer.cs">
+      <DependentUpon>KetQuaHocTap.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\KhoaNganh\DSKhoa.aspx.cs">
       <DependentUpon>DSKhoa.aspx</DependentUpon>
@@ -1718,6 +1753,13 @@
     </Compile>
     <Compile Include="Page\TaiKhoan\CapNhatTaiKhoanSinhVien.aspx.designer.cs">
       <DependentUpon>CapNhatTaiKhoanSinhVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\ThongTinCacLopHoc.aspx.cs">
+      <DependentUpon>ThongTinCacLopHoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\ThongTinCacLopHoc.aspx.designer.cs">
+      <DependentUpon>ThongTinCacLopHoc.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Page\MonHoc\SuaMonHoc.aspx.cs">

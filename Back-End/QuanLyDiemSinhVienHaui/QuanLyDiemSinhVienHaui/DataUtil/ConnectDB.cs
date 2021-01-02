@@ -10,7 +10,7 @@ namespace QuanLyDiemSinhVienHaui.DataUtil
     {
         public static SqlConnection getDBConnection()
         {
-            String connString = @"Data Source=DESKTOP-UORBSEQ\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
+            String connString = @"Data Source=DESKTOP-ENU0VNB\SQLEXPRESS;Initial Catalog=QLSV1;Integrated Security=True";
             SqlConnection conn = new SqlConnection(connString);
             return conn;
         }
