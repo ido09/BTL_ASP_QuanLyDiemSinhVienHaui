@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Page/MasterPage.Master" AutoEventWireup="true" CodeBehind="SuaGiangVien.aspx.cs" Inherits="QuanLyDiemSinhVienHaui.Page.GiangVien.SuaGiangVien" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
     Sửa giảng viên
 </asp:Content>
@@ -59,7 +60,10 @@
             </div>
         </div>
         <div class="form-group row">
-            <asp:Image runat="server" ID="avatarOld" />
+            <label for="" class="col-4 col-form-label">Old avatar:</label>
+            <div class="col-8">
+                <asp:Image runat="server" ID="avatarOld" ImageUrl="~/images/GiangVien/" Width="150" />
+            </div>
         </div>
 
         <div class="form-group row">

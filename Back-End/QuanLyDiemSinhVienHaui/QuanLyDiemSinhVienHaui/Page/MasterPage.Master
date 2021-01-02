@@ -73,8 +73,8 @@
                                 <a href="#"><i class="fas fa-user-circle"></i><span>Quản lý tài khoản </span><span class="arrow"><i
                                     class="fas fa-sort-down"></i></span></a>
                                 <ul class="submenu">
-                                    <li><a href="#">Tài khoản sinh viên</a></li>
-                                    <li><a href="#">Tài khoản giảng viên</a></li>
+                                    <li><a href="/Page/TaiKhoan/TaiKhoanSinhVien.aspx">Tài khoản sinh viên</a></li>
+                                    <li><a href="/Page/TaiKhoan/TaiKhoanGiangVien.aspx">Tài khoản giảng viên</a></li>
                                 </ul>
                             </li>
                             <%}%>

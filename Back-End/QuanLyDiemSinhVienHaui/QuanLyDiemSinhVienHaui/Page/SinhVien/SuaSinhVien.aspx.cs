@@ -25,6 +25,7 @@ namespace QuanLyDiemSinhVienHaui.Page.SinhVien
                 txtNgaySinh.Text = sv.birthday;
                 txtPhone.Text = sv.phone;
                 txtAddress.Text = sv.address;
+                avatarOld.ImageUrl = sv.avatar;
 
                 if (sv.gender.Equals("Nam"))
                     rdNam.Checked = true;
