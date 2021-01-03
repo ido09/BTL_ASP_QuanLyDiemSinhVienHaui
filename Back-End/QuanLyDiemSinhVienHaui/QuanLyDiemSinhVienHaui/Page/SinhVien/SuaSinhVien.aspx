@@ -62,7 +62,7 @@
         <div class="form-group row">
             <label for="" class="col-4 col-form-label">Old avatar:</label>
             <div class="col-8">
-                <asp:Image runat="server" ID="avatarOld" ImageUrl="~/images/SinhVien/" Width="150" />
+                <asp:Image runat="server" ID="avatarOld" ImageUrl="~/images/SinhVien/" Width="70" />
             </div>
         </div>
         <div class="form-group row">
